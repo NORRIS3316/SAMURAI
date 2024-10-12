@@ -1,0 +1,338 @@
+* {
+  box-sizing: border-box;
+ }
+ 
+ body {
+  max-width: 1960px;
+  margin: 0 auto 0 auto;
+  font-family: "Source Sans Pro", "Hiragino Kaku Gothic ProN", Meiryo, Arial, sans-serif;
+  font-size: 15px;
+ }
+
+ 
+ .header {
+  text-align: center; /* 中央揃え */
+}
+
+@media screen and (max-width: 1024px) {
+  .header {
+    padding: 70px 30px; /* パディングを減らす */
+  }
+}
+
+.logo {
+  width: 100%; /* 通常時は画像をページ幅に合わせる */
+  height: auto; /* 縦横比を維持 */
+  display: block; /* ブロック要素として表示 */
+  margin: 0 auto; /* 中央揃え */
+}
+
+
+#nav-pc {
+  display: flex;
+  justify-content: center; /* 横方向で中央揃え */
+  align-items: center; /* 縦方向で中央揃え */
+  height: 200px; /* ナビゲーションの高さ */
+}
+
+#nav-pc ul {
+  display: flex;
+  list-style: none; /* リストスタイルを削除 */
+  padding: 0;
+  margin: 0;
+}
+
+#nav-pc ul li {
+  margin: 0 15px; /* 各メニュー項目の間隔 */
+}
+
+#nav-pc ul li a {
+  text-decoration: none; /* リンクの下線を削除 */
+  color: #333; /* テキストカラー */
+  font-size: 18px; /* フォントサイズ */
+}
+
+.slide {
+  position: relative;
+  overflow: hidden;
+  width: 1500px;
+  height: 600px;
+  margin: auto;
+  background: #fff;
+  margin-bottom: 50px; /* 下に50pxのスペースを追加 */
+}
+
+/* 画面幅が1024px以下の場合のスタイル */
+@media (max-width: 1024px) {
+  .slide {
+    width: 75%; /* 画面幅の90%に縮小 */
+    height: 450px; /* 高さを450pxに調整 */
+  }
+}
+
+/* 画面幅が768px以下の場合のスタイル */
+@media (max-width: 768px) {
+  .slide {
+    width: 100%; /* 画面幅に合わせて100%に設定 */
+    height: 350px; /* 高さを350pxに調整 */
+  }
+}
+
+.slide img {
+  display: block;
+  position: absolute;
+  width: 100%; /* 画像の幅を親要素に合わせる */
+  height: 100%; /* 画像の高さを親要素に合わせる */
+  left: 0; /* 左端に配置 */
+  animation: slide-anime 15s ease infinite;
+}
+
+
+/* 画像のアニメーション遅延 */
+.slide img:nth-of-type(1) {animation-delay: 0s;}
+.slide img:nth-of-type(2) {animation-delay: 5s;}
+.slide img:nth-of-type(3) {animation-delay: 10s;}
+
+/* スライドアニメーションのキーアニメーション */
+@keyframes slide-anime {
+  0% {left: 100%;}
+  5% {left: 0;}
+  33% {left: 0;}
+  38% {left: -100%;}
+  100% {left: -100%;}
+}
+
+.main {
+  text-align: center; /* 中央揃え */
+}
+
+.logo2 {
+  width: 100%; /* 画像をページ幅に合わせる */
+  height: auto; /* 画像の縦横比を維持 */
+}
+
+.MESSAGE {
+  text-align: center; /* 中央揃え */
+  margin-top: 20px; /* 上にスペースを追加 */
+  color: #000; /* 文字色を黒に設定 */
+}
+
+.MESSAGE h1 {
+  font-size: 18px; /* フォントサイズを設定 */
+  color: inherit; /* .MESSAGEの文字色を継承 */
+  margin-bottom: 50px; /* 下に50pxのスペースを追加 */
+}
+
+.img2{
+  display: block;
+  margin: 0 auto; /* 左右のマージンを自動にして中央揃え */
+  margin-bottom: 50px; /* 下に50pxのスペースを追加 */
+}
+
+@media (max-width: 1024px) {
+  .img2 {
+    width: 100%; /* 幅を画面幅の80%に設定 */
+  }
+}
+
+/* 画面幅が768px以下の場合のスタイル */
+@media (max-width: 768px) {
+  .img2 {
+    width: 100\\%; /* 幅をさらに画面幅の70%に設定 */
+  }
+}
+
+
+#logo3 {
+  display: block;
+}
+
+.img3{
+  display: block;
+    margin: 0 auto; /* 画像を中央に配置 */
+    width: 90%; /* 画像の幅を90%に設定して大きくする */
+    max-width: 1200px; /* 最大幅を1200pxに制限 */
+    height: auto; /* 縦横比を維持 */
+    margin-bottom: 50px; /* 下に50pxのスペースを追加 */
+}
+
+.img4{
+  display: block;
+  margin: 0 auto;
+  width: 1500px; 
+  height: auto; /* 縦横比を維持 */
+  margin-bottom: 100px; /* 下に100pxのスペースを追加 */
+}
+
+@media (max-width: 1024px) {
+  .img4 {
+    width: 100%; /* 幅を画面幅の80%に設定 */
+  }
+}
+
+/* 画面幅が768px以下の場合のスタイル */
+@media (max-width: 768px) {
+  .img4 {
+    width: 100\\%; /* 幅をさらに画面幅の70%に設定 */
+  }
+}
+
+#logo4 {
+  display: block;
+}
+
+#Seruice-flex {
+  display: flex;
+  gap: 40px; /* ボックス間のスペース */
+  padding: 20px; /* セクションの内側に余白を追加 */
+  margin-left: auto; /* 左右のマージンを自動設定 */
+  margin-right: auto;
+  width: 100%; /* 親要素の幅を100%に設定 */
+  max-width: 1200px; /* 必要に応じて最大幅を設定 */
+  justify-content: center; /* 子要素を中央に揃える */
+  margin-bottom: 50px; /* 下に50pxのスペースを追加 */
+}
+
+.Seruice-box {
+  width: 310px; /* ボックスの幅 */
+  height: 250px; /* ボックスの高さ */
+  background-color: #ccc; /* グレーの背景色 */
+}
+
+
+/* 画面幅が1024px以下の場合のスタイル */
+@media (max-width: 1024px) {
+  #Seruice-flex {
+    justify-content: center; /* 親要素で中央揃え */
+  }
+
+  .Seruice-box {
+    width: 240px; /* 幅を240pxに設定 */
+  }
+}
+
+/* 画面幅が768px以下の場合のスタイル */
+@media (max-width: 768px) {
+  #Seruice-flex {
+    justify-content: center; /* 親要素で中央揃え */
+  }
+
+  .Seruice-box {
+    width: 200px; /* 幅を200pxに設定 */
+  }
+}
+
+
+.Seruice-box {
+  width: 250px; /* デフォルトの幅 */
+  height: 250px; /* デフォルトの高さ */
+  background-color: #ccc; /* グレーの背景色 */
+  flex-shrink: 0; /* ボックスが縮小しないようにする */
+}
+
+#logo5 {
+  display: block;
+}
+
+.layout-container {
+  display: flex;
+  margin-bottom: 50px; /* 下に100pxのスペースを追加 */
+}
+
+.table-container {
+  width: 30%; /* テーブルの幅を30%に設定 */
+  margin-right: 20px; /* 右にスペースを追加 */
+}
+
+.table-container table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table-container td {
+  border: 1px solid #ccc;
+  padding: 8px;
+  text-align: left;
+}
+
+.table-container td:nth-child(2) {
+  text-align: left;
+  vertical-align: middle;
+}
+
+#Seruice-flex {
+  width: 70%; /* サービスのボックスの幅を70%に設定 */
+}
+
+.layout-container {
+  display: flex;
+  justify-content: center; /* 水平方向で中央揃え */
+  align-items: flex-start; /* 上揃え */
+  gap: 20px; /* 要素間のスペース */
+  padding: 20px;
+  max-width: 1000px; /* コンテナの最大幅を設定 */
+  margin: 0 auto; /* コンテナ全体を中央に配置 */
+}
+
+.table-container {
+  flex: 0 1 45%; /* テーブルの幅をコンテナの45%に設定 */
+  min-width: 250px; /* 最小幅を設定してレスポンシブに対応 */
+}
+
+.map-container {
+  flex: 0 1 45%; /* マップの幅をコンテナの45%に設定 */
+  min-width: 250px; /* 最小幅を設定してレスポンシブに対応 */
+  height: 350px; /* マップコンテナの高さを設定 */
+}
+
+iframe {
+  width: 100%; /* iframeの幅を親要素に合わせる */
+  height: 100%; /* iframeの高さを親要素の高さに合わせる */
+  max-width: 100%; /* 最大幅を親要素の幅に合わせる */
+}
+
+table td:first-child {
+  background-color: #ff1493; /* 濃いピンクの背景色 */
+  color: white; /* テキストの色を白にして読みやすくする */
+  padding: 8px; /* セルの内側に余白を追加 */
+}
+
+
+footer {
+  background-color: black;
+  text-align: center;
+  padding: 80px 80px 30px 80px;
+ }
+
+#footer {
+    width: 100%;
+}
+
+.img-left {
+  display: block;
+  margin-right: auto; /* 左端に配置するために右のマージンを自動に設定 */
+  margin-bottom: 10px; /* 下の画像との間に余白を追加 */
+}
+
+
+.img-center {
+    display: block;
+    margin: 0 auto; /* 中央揃えにする */
+}
+
+@media screen and (max-width: 1024px) {
+  h1 {
+    font-size: 1px; /* 小さなフォントサイズ */
+  }
+
+/* 幅が768px以下のときの調整 */
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 1px;
+  }
+
+
+
+
+
+
